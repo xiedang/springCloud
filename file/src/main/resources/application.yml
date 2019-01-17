@@ -1,0 +1,24 @@
+server:
+  port: 8083
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.xiedang.file.model
+spring:
+  application:
+    name: file
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test
+    type: org.apache.commons.dbcp.BasicDataSource
+  mvc:
+    view:
+      prefix: /jsp/
+      suffix: .jsp
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+    fetch-registry: true
+    register-with-eureka: true
