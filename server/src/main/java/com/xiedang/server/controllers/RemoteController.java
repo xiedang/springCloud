@@ -39,7 +39,7 @@ public class RemoteController {
     @GetMapping(value = "/list")
     @ResponseBody
     public Object showUsers() {
-        Object object = restTemplate.getForObject("http://client_001:8082/userList", Object.class);
+        Object object = restTemplate.getForObject("http://localhost:8082/userList", Object.class);
         return object;
     }
 
